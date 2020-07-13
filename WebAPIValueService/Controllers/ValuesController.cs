@@ -13,7 +13,7 @@ namespace WebAPIValueService.Controllers
     {
         public IEnumerable<string> Get()
         {
-            return new string[] { "value a", "value b" };
+            return new string[] { "value a", "value b","value c" };
         }
     }
 }
