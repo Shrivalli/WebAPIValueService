@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebAPIValueService/WebAPIValueService.csproj", "WebAPIValueService/"]
+COPY ["./WebAPIValueService.csproj", "WebAPIValueService/"]
 RUN dotnet restore "WebAPIValueService/WebAPIValueService.csproj"
 COPY . .
 WORKDIR "/src/WebAPIValueService"
