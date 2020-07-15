@@ -10,7 +10,7 @@ WORKDIR /src
 COPY ["./WebAPIValueService.csproj", "WebAPIValueService/"]
 RUN dotnet restore "WebAPIValueService/WebAPIValueService.csproj"
 COPY . .
-WORKDIR "/src/WebAPIValueService"
+
 RUN dotnet build "WebAPIValueService.csproj" -c Release -o /app/build
 
 FROM build AS publish
